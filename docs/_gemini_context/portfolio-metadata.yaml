@@ -1,0 +1,329 @@
+# Elicon Portfolio Metadata
+# 26개 프로젝트 메타데이터 및 티어 관리
+
+version: 1.0
+last_updated: 2025-11-12
+owner: 서대표
+
+# ═══════════════════════════════════════════════════════════
+# TIER 1: 핵심 수익 프로젝트 (AI 지원 100%)
+# ═══════════════════════════════════════════════════════════
+
+tier_1:
+  description: "핵심 수익 프로젝트 - 최우선 리소스 할당"
+  ai_support_level: 100
+  max_projects: 5
+  criteria:
+    - revenue_generating OR high_revenue_potential
+    - strategic_priority_critical
+    - clear_market_opportunity
+
+  projects:
+    - id: "04_marketing_park"
+      name: "MarketingPark B2B 협력"
+      status: in_progress
+      priority: 5
+      current_epic: "Epic 1: Foundation"
+      current_story: "Story 1.1 완료, 1.2 시작"
+      progress: 40
+      next_milestone: "Story 1.2 완료 (Hero Section)"
+      estimated_completion: "2025-11-20"
+      blockers: []
+      dependencies: []
+      roi_potential: high
+      notes: "Next.js 14 + Tailwind 검증 완료. 성공 시 표준 패턴화"
+      reusable_assets:
+        - "Next.js 14 + Tailwind 조합"
+        - "docs/ 4개 파일 구조"
+        - "Story 기반 개발 프로세스"
+
+    - id: "01_wing"
+      name: "Wing Fishing 브랜드 웹사이트"
+      status: design_phase
+      priority: 4
+      current_epic: "웹사이트 구축"
+      current_story: "디자인 시안 검토"
+      progress: 80
+      next_milestone: "디자인 승인 → 개발 시작"
+      estimated_completion: "2025-11-25"
+      blockers:
+        - type: approval_needed
+          description: "서대표님 디자인 피드백 대기"
+          blocking_since: "2025-11-10"
+      dependencies: []
+      roi_potential: high
+      notes: "낚시 전문 브랜드. 디자인 완료 시 개발 1주 예상"
+      reusable_assets:
+        - "제품 카탈로그 컴포넌트"
+        - "브랜드 스토리텔링 구조"
+
+    - id: "02_cocolic"
+      name: "Cocolic 반려동물 브랜드"
+      status: paused
+      priority: 3
+      current_epic: "브랜드 전략 수립"
+      current_story: "시장 조사"
+      progress: 20
+      next_milestone: "Wing 완료 후 재시작"
+      estimated_completion: "2025-12-15"
+      blockers:
+        - type: resource_constraint
+          description: "Tier 1 리소스 포화 (MarketingPark, Wing 집중)"
+          blocking_since: "2025-10-28"
+      dependencies:
+        - project_id: "01_wing"
+          reason: "디자인 패턴 재사용 대기"
+      roi_potential: medium_high
+      notes: "Wing 성공 패턴 적용 예정. 반려동물 시장 성장세"
+      tier_review_trigger: "Wing 완료 시점"
+
+# ═══════════════════════════════════════════════════════════
+# TIER 2: 성장 단계 프로젝트 (AI 지원 70%)
+# ═══════════════════════════════════════════════════════════
+
+tier_2:
+  description: "성장 단계 프로젝트 - 점진적 발전"
+  ai_support_level: 70
+  max_projects: 10
+  criteria:
+    - medium_revenue_potential
+    - strategic_priority_important
+    - active_growth_stage
+
+  projects:
+    - id: "03_seanex"
+      name: "Seanex 해양 산업 플랫폼"
+      status: planning
+      priority: 3
+      current_epic: "시장 진입 전략"
+      current_story: "경쟁사 분석"
+      progress: 30
+      next_milestone: "콘텐츠 전략 수립"
+      estimated_completion: "2026-01-30"
+      blockers:
+        - type: content_preparation
+          description: "해양 산업 전문 콘텐츠 부족"
+      dependencies: []
+      roi_potential: medium_high
+      notes: "B2B 해양 산업. 콘텐츠 준비 후 Tier 1 전환 검토"
+      tier_promotion_criteria:
+        - content_library_ready: 50_articles
+        - partner_confirmed: 3_companies
+        - technical_ready: true
+
+    - id: "00_elicon_main"
+      name: "Elicon 메인 웹사이트"
+      status: maintenance
+      priority: 2
+      current_epic: "리뉴얼 계획"
+      current_story: "현황 분석"
+      progress: 10
+      next_milestone: "3개 Tier 1 완료 후 재설계"
+      estimated_completion: "2026-02-28"
+      blockers: []
+      dependencies:
+        - project_id: "04_marketing_park"
+          reason: "성공 패턴 적용"
+        - project_id: "01_wing"
+          reason: "디자인 시스템 적용"
+      roi_potential: medium
+      notes: "엘리콘 포트폴리오 쇼케이스. Tier 1 성공 사례 집대성"
+
+    - id: "05_project_e"
+      name: "프로젝트 E (미정)"
+      status: concept
+      priority: 1
+      progress: 0
+      notes: "향후 신규 프로젝트 슬롯"
+
+    - id: "06_project_f"
+      name: "프로젝트 F (미정)"
+      status: concept
+      priority: 1
+      progress: 0
+      notes: "향후 신규 프로젝트 슬롯"
+
+    # ... (7-15번 프로젝트 슬롯)
+
+# ═══════════════════════════════════════════════════════════
+# TIER 3: 유지보수/아카이브 (AI 지원 30%)
+# ═══════════════════════════════════════════════════════════
+
+tier_3:
+  description: "유지보수 또는 아카이브 프로젝트 - 자동화 중심"
+  ai_support_level: 30
+  max_projects: unlimited
+  criteria:
+    - maintenance_mode OR archived
+    - no_active_revenue
+    - strategic_priority_low
+
+  projects:
+    - id: "legacy_01"
+      name: "Legacy Website A"
+      status: archived
+      priority: 1
+      progress: 100
+      notes: "안정 운영 중. 자동 모니터링만"
+
+    - id: "legacy_02"
+      name: "Legacy Project B"
+      status: archived
+      priority: 1
+      progress: 100
+      notes: "문서화 완료. 필요 시 참고용"
+
+    # ... (16-26번 프로젝트)
+
+# ═══════════════════════════════════════════════════════════
+# 크로스 프로젝트 리소스
+# ═══════════════════════════════════════════════════════════
+
+shared_resources:
+  location: "/Users/elicon_mark/Gemini_Projects/_shared/"
+
+  components:
+    - name: "Hero Section (Next.js)"
+      source_project: "04_marketing_park"
+      status: in_development
+      reusable_by: ["01_wing", "02_cocolic", "03_seanex", "00_elicon_main"]
+      estimated_time_saving: "2h per project"
+
+    - name: "Contact Form (React Hook Form + Zod)"
+      source_project: "04_marketing_park"
+      status: planned
+      reusable_by: "all web projects"
+      estimated_time_saving: "3h per project"
+
+    - name: "SEO Setup (next-seo)"
+      source_project: "04_marketing_park"
+      status: in_development
+      reusable_by: "all Next.js projects"
+      estimated_time_saving: "1h per project"
+
+  patterns:
+    - name: "Elicon Standard v1.0"
+      description: "docs/ 4개 파일 구조 + Story 기반 개발"
+      source_project: "04_marketing_park"
+      status: validated
+      applies_to: "all 26 projects"
+      documentation: "/Users/elicon_mark/Gemini_Projects/26_template_research/COMPARISON.md"
+
+    - name: "Tier Management System"
+      description: "3-tier portfolio management"
+      source_project: "26_template_research"
+      status: in_design
+      applies_to: "portfolio level"
+
+  design_systems:
+    - name: "Elicon Design System"
+      status: to_be_created
+      source_projects: ["01_wing", "02_cocolic"]
+      components: ["colors", "typography", "spacing", "components"]
+
+# ═══════════════════════════════════════════════════════════
+# 의존성 그래프
+# ═══════════════════════════════════════════════════════════
+
+dependencies:
+  - from: "02_cocolic"
+    to: "01_wing"
+    type: pattern_reuse
+    description: "Wing 디자인 패턴 재사용"
+    blocking: true
+
+  - from: "00_elicon_main"
+    to: "04_marketing_park"
+    type: success_pattern
+    description: "MarketingPark 성공 사례 적용"
+    blocking: false
+
+  - from: "00_elicon_main"
+    to: "01_wing"
+    type: design_system
+    description: "Wing 디자인 시스템 통합"
+    blocking: false
+
+  - from: "03_seanex"
+    to: "04_marketing_park"
+    type: component_reuse
+    description: "Contact Form 등 컴포넌트 재사용"
+    blocking: false
+
+# ═══════════════════════════════════════════════════════════
+# 포트폴리오 KPI
+# ═══════════════════════════════════════════════════════════
+
+portfolio_metrics:
+  overall:
+    total_projects: 26
+    active_projects: 5
+    tier_1_count: 3
+    tier_2_count: 2
+    tier_3_count: 21
+
+  health:
+    on_track: 3
+    at_risk: 1
+    blocked: 1
+
+  resource_utilization:
+    ai_capacity: 100
+    ai_allocated: 85
+    ai_available: 15
+
+  roi_forecast:
+    tier_1_total: high
+    expected_revenue_2025: TBD
+    expected_revenue_2026: TBD
+
+# ═══════════════════════════════════════════════════════════
+# 자동화 규칙
+# ═══════════════════════════════════════════════════════════
+
+automation_rules:
+  daily:
+    - task: portfolio_health_check
+      frequency: every_morning
+      action: "*portfolio-status brief"
+
+    - task: blocker_detection
+      frequency: every_4_hours
+      action: alert_if_new_blockers
+
+  weekly:
+    - task: tier_review
+      frequency: monday_morning
+      action: "*project-health all"
+
+    - task: resource_optimization
+      frequency: friday_afternoon
+      action: "*resource-map"
+
+  milestone_triggered:
+    - trigger: story_completed
+      action: auto_document
+
+    - trigger: epic_completed
+      action: retrospective_report
+
+    - trigger: project_completed
+      action: extract_patterns
+
+# ═══════════════════════════════════════════════════════════
+# 티어 전환 이력
+# ═══════════════════════════════════════════════════════════
+
+tier_transitions:
+  - project: "04_marketing_park"
+    from: tier_2
+    to: tier_1
+    date: "2025-10-15"
+    reason: "B2B 계약 체결, 매출 발생 가능성 확인"
+
+  - project: "02_cocolic"
+    from: tier_1
+    to: tier_1
+    date: "2025-10-28"
+    reason: "일시 중단 (리소스 부족), Tier 유지하되 진행 보류"
+    note: "Wing 완료 시 재개"
