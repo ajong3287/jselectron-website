@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
@@ -14,6 +16,9 @@ export default function Footer() {
         </p>
         <p className="pt-2">
           Copyright © {currentYear} JS Electron. All Rights Reserved.
+        </p>
+        <p className="mt-2 space-x-4">
+          <Link href="/support" className="hover:underline">고객 지원 (FAQ)</Link>
         </p>
       </div>
     </footer>

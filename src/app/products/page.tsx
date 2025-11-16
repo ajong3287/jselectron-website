@@ -1,43 +1,18 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: '제품 소개',
   description: 'SinoTech 커넥터, MUP 카드소켓, CELDUC SSR, LithoTop 배터리, Amos 핀헤더 전문 공급. 기술 상담 및 견적 문의 가능.',
 };
 
-// 5대 핵심 파트너 및 전문 분야 데이터 (PRD 5.0, Arch 6.0 기반)
 const manufacturers = [
-  {
-    name: 'SinoTech',
-    specialty: '통신/네트워크/범용 커넥터',
-    url: '/products/sinotech',
-    logo: '/logos/sinotech-logo-placeholder.png', // (임시 경로)
-  },
-  {
-    name: 'MUP',
-    specialty: 'IC/SIM/메모리 카드 커넥터',
-    url: '/products/mup',
-    logo: '/logos/mup-logo-placeholder.png', // (임시 경로)
-  },
-  {
-    name: 'CELDUC',
-    specialty: '산업용 SSR (무접점 릴레이)',
-    url: '/products/celduc',
-    logo: '/logos/celduc-logo-placeholder.png', // (임시 경로)
-  },
-  {
-    name: 'LithoTop',
-    specialty: '소형 리튬 폴리머 배터리',
-    url: '/products/lithotop',
-    logo: '/logos/lithotop-logo-placeholder.png', // (임시 경로)
-  },
-  {
-    name: 'Amos',
-    specialty: '핀 헤더 및 IC 소켓 (PCB 표준)',
-    url: '/products/amos',
-    logo: '/logos/amos-logo-placeholder.png', // (임시 경로)
-  },
+  { name: 'SinoTech', specialty: '통신/네트워크/범용 커넥터', url: '/products/sinotech', logo: '/logos/sinotech.png' },
+  { name: 'MUP', specialty: 'IC/SIM/메모리 카드 커넥터', url: '/products/mup', logo: '/logos/mup.png' },
+  { name: 'CELDUC', specialty: '산업용 SSR (무접점 릴레이)', url: '/products/celduc', logo: '/logos/celduc.png' },
+  { name: 'LithoTop', specialty: '소형 리튬 폴리머 배터리', url: '/products/lithotop', logo: '/logos/lithotop.png' },
+  { name: 'Amos', specialty: '핀 헤더 및 IC 소켓 (PCB 표준)', url: '/products/amos', logo: '/logos/amos.png' },
 ];
 
 export default function ProductsPage() {
@@ -65,11 +40,13 @@ export default function ProductsPage() {
             <Link key={m.name} href={m.url}
                   className="block p-6 bg-white border border-gray-200 rounded-lg shadow-md
                              hover:shadow-lg hover:border-blue-500 transition-all duration-300">
-              <div className="h-20 mb-4 flex items-center justify-center bg-gray-50 rounded-md">
-                {/* 임시 로고 텍스트.
-                    TODO: /public/logos/ 폴더에 실제 이미지 파일 추가 필요.
-                */}
-                <span className="text-gray-400 italic">({m.name} 로고 영역)</span>
+              <div className="h-20 mb-4 flex items-center justify-center bg-gray-50 rounded-md p-2 relative">
+                <Image
+                  src={m.logo}
+                  alt={`${m.name} 로고`}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {m.name}

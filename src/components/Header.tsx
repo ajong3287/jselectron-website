@@ -18,6 +18,7 @@ export default function Header() {
           <Link href="/" className="text-gray-700 hover:text-blue-600">홈</Link>
           <Link href="/about" className="text-gray-700 hover:text-blue-600">회사 소개</Link>
           <Link href="/products" className="text-gray-700 hover:text-blue-600">제품 소개</Link>
+          <Link href="/support" className="text-gray-700 hover:text-blue-600">고객 지원</Link>
           <Link href="/contact" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium">문의하기</Link>
         </div>
         <div className="md:hidden">

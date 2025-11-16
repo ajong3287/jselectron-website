@@ -1,10 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: '회사 소개',
   description: '커넥터 & 배터리 전문 제이에스일렉트론. CEO 박동주의 정직한 기술 파트너십, SinoTech·MUP·CELDUC·LithoTop·Amos 공식 취급. 견적 상담 환영.',
 };
+
+const partners = [
+  { name: 'SinoTech', specialty: '통신/네트워크/범용 커넥터', url: '/products/sinotech', logo: '/logos/sinotech.png' },
+  { name: 'MUP', specialty: 'IC/SIM/메모리 카드 커넥터', url: '/products/mup', logo: '/logos/mup.png' },
+  { name: 'CELDUC', specialty: '산업용 SSR (무접점 릴레이)', url: '/products/celduc', logo: '/logos/celduc.png' },
+  { name: 'LithoTop', specialty: '소형 리튬 폴리머 배터리', url: '/products/lithotop', logo: '/logos/lithotop.png' },
+  { name: 'Amos', specialty: '핀 헤더 및 IC 소켓 (PCB 표준)', url: '/products/amos', logo: '/logos/amos.png' },
+];
 
 export default function AboutPage() {
   return (
@@ -92,19 +101,17 @@ export default function AboutPage() {
           검증된 제품의 안정적인 한국 공급이 가능합니다.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* 임시 파트너 데이터. TODO: Story 2.1/2.2에서 링크 연결 */}
-          {[
-            { name: 'SinoTech', specialty: '통신/네트워크/범용 커넥터', url: '/products/sinotech' },
-            { name: 'MUP', specialty: 'IC/SIM/메모리 카드 커넥터', url: '/products/mup' },
-            { name: 'CELDUC', specialty: '산업용 SSR (무접점 릴레이)', url: '/products/celduc' },
-            { name: 'LithoTop', specialty: '소형 리튬 폴리머 배터리', url: '/products/lithotop' },
-            { name: 'Amos', specialty: '핀 헤더 및 IC 소켓 (PCB 표준)', url: '/products/amos' },
-          ].map((partner) => (
+          {partners.map((partner) => (
             <Link key={partner.name} href={partner.url}
                   className="block p-6 bg-white border border-gray-200 rounded-lg shadow-md
                              hover:shadow-lg hover:border-blue-500 transition-all duration-300">
-              <div className="h-20 mb-4 flex items-center justify-center bg-gray-50 rounded-md">
-                <span className="text-gray-400 italic">({partner.name} 로고 영역)</span>
+              <div className="h-20 mb-4 flex items-center justify-center bg-gray-50 rounded-md p-2 relative">
+                <Image
+                  src={partner.logo}
+                  alt={`${partner.name} 로고`}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {partner.name}

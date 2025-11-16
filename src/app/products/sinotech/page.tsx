@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'SinoTech 커넥터',
@@ -31,9 +32,14 @@ export default function SinoTechPage() {
           <h1 className="text-3xl font-bold text-gray-900">
             SinoTech (시노텍)
           </h1>
-          {/* 임시 로고 */}
-          <div className="w-32 h-16 flex items-center justify-center bg-gray-50 rounded-md">
-             <span className="text-gray-400 italic">(SinoTech 로고)</span>
+          {/* 로고 */}
+          <div className="w-32 h-16 flex items-center justify-center bg-gray-50 rounded-md p-2 relative">
+            <Image
+              src="/logos/sinotech.png"
+              alt="SinoTech 로고"
+              fill
+              style={{ objectFit: 'contain' }}
+            />
           </div>
         </div>
         <p className="text-lg text-gray-700 border-l-4 border-blue-600 pl-4">

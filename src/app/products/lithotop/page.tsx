@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'LithoTop 소형 배터리',
@@ -31,9 +32,14 @@ export default function LithoTopPage() {
           <h1 className="text-3xl font-bold text-gray-900">
             LithoTop (리소탑)
           </h1>
-          {/* 임시 로고 */}
-          <div className="w-32 h-16 flex items-center justify-center bg-gray-50 rounded-md">
-             <span className="text-gray-400 italic">(LithoTop 로고)</span>
+          {/* 로고 */}
+          <div className="w-32 h-16 flex items-center justify-center bg-gray-50 rounded-md p-2 relative">
+            <Image
+              src="/logos/lithotop.png"
+              alt="LithoTop 로고"
+              fill
+              style={{ objectFit: 'contain' }}
+            />
           </div>
         </div>
         <p className="text-lg text-gray-700 border-l-4 border-blue-600 pl-4">
