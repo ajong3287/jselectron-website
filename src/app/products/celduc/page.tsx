@@ -6,16 +6,20 @@ export const metadata: Metadata = {
   description: 'CELDUC (셀딕)의 고신뢰성 산업용 SSR(무접점 릴레이), 모터 컨트롤러, 마그네틱 센서 전문. 전문가와 상담하세요.',
 };
 
-// CELDUC 핵심 제품 카테고리 (PDF 카탈로그 기반)
-const categories = [
-  { name: '단상 SSR (1-Phase)', description: 'okpac®, celpac® 시리즈. 정밀 히팅(플라스틱 사출, 식품 가공), 조명 제어용' },
-  { name: '2상/3상 SSR (2/3-Phase)', description: 'sightpac®, cel3pac® 시리즈. 3상 모터, 대용량 히터 제어용' },
-  { name: '모터 컨트롤러', description: '소프트 스타터(SMCV), 정/역 회전 리버싱 스위치(SMR, SGR)' },
-  { name: '아날로그 컨트롤러', description: '0-10V, 4-20mA 입력. 위상 각(Phase Angle) 및 버스트(Burst) 정밀 전력 제어기' },
-  { name: 'DC SSR', description: 'DC 모터, 밸브, LED 등 DC 부하 제어를 위한 MOSFET, IGBT 기반 릴레이' },
-  { name: '마그네틱 센서', description: '위치, 레벨, 속도 감지용 Reed 센서. ATEX 및 Safety 인증 제품 포함' },
-  { name: '특수 인증 제품', description: '철도(EN 50155) 및 의료기기(EN 60601-1) 표준 준수 고신뢰성 릴레이' },
+// --- 큐레이션 (수정됨) ---
+// 핵심 전문 분야 (Curation)
+const coreCategories = [
+  { name: '산업용 SSR (단상/다상)', description: 'okpac®, celpac®, sightpac® 시리즈. 정밀 히팅(플라스틱 사출, 식품 가공), 조명 제어용' },
+  { name: '모터 제어 & 컨트롤러', description: '소프트 스타터(SMCV), 정/역 회전(SGR), 0-10V 위상 각 제어(SG4) 등 산업용 모터 제어' },
+  { name: '마그네틱 센서 (ATEX/Safety)', description: '위치, 레벨, 속도 감지. ATEX(방폭) 및 Safety(안전) 인증 고신뢰성 센서' },
 ];
+
+// 기타 취급 제품군
+const otherCategories = [
+  { name: 'DC SSR (직류 릴레이)', description: 'DC 모터, 밸브, LED 등 DC 부하 제어를 위한 MOSFET, IGBT 기반 릴레이' },
+  { name: '특수 인증 릴레이', description: '철도(EN 50155) 및 의료기기(EN 60601-1) 표준 준수 고신뢰성 릴레이' },
+];
+// --- 큐레이션 종료 ---
 
 export default function CelducPage() {
   return (
@@ -38,13 +42,42 @@ export default function CelducPage() {
         </p>
       </section>
 
-      {/* 제품 카테고리 리스트 (AC 2) */}
+      {/* --- 수정된 레이아웃 --- */}
+      {/* 핵심 전문 분야 리스트 (AC 2) */}
       <section>
         <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-          주요 취급 제품군
+          핵심 전문 분야
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category) => (
+          {coreCategories.map((category) => (
+            <div key={category.name}
+                 className="p-6 bg-blue-50 border border-blue-200 rounded-lg shadow-sm flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">
+                  {category.name}
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  {category.description}
+                </p>
+              </div>
+              <div className="mt-4">
+                <Link href="/contact"
+                      className="font-medium text-blue-600 hover:text-blue-800">
+                  전문가 상담하기 →
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 기타 취급 제품군 리스트 */}
+      <section>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          기타 취급 제품군
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {otherCategories.map((category) => (
             <div key={category.name}
                  className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col justify-between">
               <div>
@@ -65,6 +98,7 @@ export default function CelducPage() {
           ))}
         </div>
       </section>
+      {/* --- 수정된 레이아웃 종료 --- */}
 
       {/* 상담 유도 섹션 (AC 3) */}
       <section className="text-center bg-gray-50 p-8 rounded-lg">
