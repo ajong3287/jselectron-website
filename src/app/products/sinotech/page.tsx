@@ -6,16 +6,21 @@ export const metadata: Metadata = {
   description: 'SinoTech (시노텍)의 통신, 네트워크, PC, 범용 커넥터 전문 공급. 전문가와 상담하세요.',
 };
 
-// SinoTech 핵심 제품 카테고리 (웹 서치 기반)
-const categories = [
-  { name: '통신/네트워크 (RJ45, RJ11)', description: 'Transformer Jacks, SMT 타입 등 다양한 PCB Modular Jacks & Plugs' },
-  { name: '광통신 (Fiber Optics)', description: 'SFP, SFP+, QSFP, SFP28 케이지 및 어댑터, 패치 코드' },
-  { name: 'RF 커넥터', description: 'UFL(USS), SMP, SMA, SMB 동축 커넥터 및 케이블 어셈블리' },
-  { name: 'PC/모바일 I/O', description: 'USB Type C, Micro/Mini USB, HDMI, Display Port (DP)' },
+// --- 큐레이션 (수정됨) ---
+// 핵심 전문 분야 (Curation)
+const coreCategories = [
+  { name: '통신 및 광통신 (Telecom & Fiber Optics)', description: 'RJ45, SFP, QSFP 등 고속 통신망 및 데이터 센터용 커넥터' },
+  { name: '산업용 및 RF (Industrial & RF)', description: 'D-SUB, 원형 커넥터, UFL/SMA 등 산업/IoT/무선 모듈용 커넥터' },
+  { name: 'PC & 디스플레이 I/O', description: 'USB-C, HDMI, Display Port 등 최신 PC/가전 인터페이스' },
+];
+
+// 기타 취급 제품군
+const otherCategories = [
   { name: '카드 커넥터', description: 'SATA, FFC/FPC, PCI Express/MINI PCI 커넥터' },
-  { name: '범용/산업용', description: '핀 헤더, 배터리 커넥터, D-SUB, 원형 커넥터, DC 파워 잭' },
+  { name: '범용 커넥터', description: '핀 헤더, 암 헤더, 배터리 커넥터' },
   { name: '기타 통신 부품', description: 'IDC 터미널 블록, Telecom 모듈, 분배 박스' },
 ];
+// --- 큐레이션 종료 ---
 
 export default function SinoTechPage() {
   return (
@@ -38,13 +43,42 @@ export default function SinoTechPage() {
         </p>
       </section>
 
-      {/* 제품 카테고리 리스트 (AC 2) */}
+      {/* --- 수정된 레이아웃 --- */}
+      {/* 핵심 전문 분야 리스트 (AC 2) */}
       <section>
         <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-          주요 취급 제품군
+          핵심 전문 분야
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category) => (
+          {coreCategories.map((category) => (
+            <div key={category.name}
+                 className="p-6 bg-blue-50 border border-blue-200 rounded-lg shadow-sm flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">
+                  {category.name}
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  {category.description}
+                </p>
+              </div>
+              <div className="mt-4">
+                <Link href="/contact"
+                      className="font-medium text-blue-600 hover:text-blue-800">
+                  전문가 상담하기 →
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 기타 취급 제품군 리스트 */}
+      <section>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          기타 취급 제품군
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {otherCategories.map((category) => (
             <div key={category.name}
                  className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col justify-between">
               <div>
@@ -65,6 +99,7 @@ export default function SinoTechPage() {
           ))}
         </div>
       </section>
+      {/* --- 수정된 레이아웃 종료 --- */}
 
       {/* 상담 유도 섹션 (AC 3) */}
       <section className="text-center bg-gray-50 p-8 rounded-lg">
