@@ -20,10 +20,10 @@ export default function HeroSection() {
 
       {/* 컨텐츠 레이어 */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] text-center p-8 md:p-12">
-        <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight">
           부품 소재 전문가에게 문의주세요.
         </h1>
-        <p className="text-2xl md:text-4xl font-bold text-blue-100 mb-10">
+        <p className="text-xl md:text-3xl font-bold text-blue-100 mb-10">
           커넥터, 소형 배터리, 산업용 SSR 전문가의 1:1 맞춤 상담.
         </p>
 
@@ -32,14 +32,14 @@ export default function HeroSection() {
           {/* 전화 상담 (Primary CTA) */}
           <a
             href="tel:01026294760"
-            className="inline-block px-10 py-4 text-xl font-bold text-blue-900 bg-white rounded-lg shadow-2xl hover:bg-blue-50 transition-all transform hover:scale-105"
+            className="inline-block px-8 py-3 text-lg font-bold text-blue-900 bg-white rounded-lg shadow-2xl hover:bg-blue-50 transition-all transform hover:scale-105"
           >
             📞 지금 바로 전화상담 (010-2629-4760)
           </a>
           {/* 간편 문의 (Secondary CTA) */}
           <Link href="/contact" passHref legacyBehavior>
             <a
-              className="inline-block px-10 py-4 text-xl font-bold text-white border-3 border-white rounded-lg hover:bg-white hover:text-blue-900 transition-all"
+              className="inline-block px-8 py-3 text-lg font-bold text-white border-3 border-white rounded-lg hover:bg-white hover:text-blue-900 transition-all"
             >
               간편 문의 남기기 →
             </a>

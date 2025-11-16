@@ -7,24 +7,24 @@ export const metadata: Metadata = {
   description: 'CELDUC (셀딕)의 고신뢰성 산업용 SSR(무접점 릴레이), 모터 컨트롤러, 마그네틱 센서 전문. 전문가와 상담하세요.',
 };
 
-// (기존 큐레이션된 카테고리 데이터)
 const coreCategories = [
-  { 
-    name: '산업용 SSR (단상/다상)', 
+  {
+    name: '산업용 SSR (단상/다상)',
     description: 'okpac®, celpac®, sightpac® 시리즈. 정밀 히팅(플라스틱 사출, 식품 가공), 조명 제어용',
-    image: '/products/celduc-ssr.jpg' 
+    image: '/products/celduc-ssr.jpg'
   },
-  { 
-    name: '모터 제어 & 컨트롤러', 
+  {
+    name: '모터 제어 & 컨트롤러',
     description: '소프트 스타터(SMCV), 정/역 회전(SGR), 0-10V 위상 각 제어(SG4) 등 산업용 모터 제어',
-    image: '/products/celduc-motor.jpg' 
+    image: '/products/celduc-motor.jpg'
   },
-  { 
-    name: '마그네틱 센서 (ATEX/Safety)', 
+  {
+    name: '마그네틱 센서 (ATEX/Safety)',
     description: '위치, 레벨, 속도 감지. ATEX(방폭) 및 Safety(안전) 인증 고신뢰성 센서',
-    image: '/products/celduc-sensor.jpg' 
+    image: '/products/celduc-sensor.jpg'
   },
 ];
+
 const otherCategories = [
   { name: 'DC SSR (직류 릴레이)', description: 'DC 모터, 밸브, LED 등 DC 부하 제어를 위한 MOSFET, IGBT 기반 릴레이' },
   { name: '특수 인증 릴레이', description: '철도(EN 50155) 및 의료기기(EN 60601-1) 표준 준수 고신뢰성 릴레이' },
@@ -32,114 +32,111 @@ const otherCategories = [
 
 export default function CelducPage() {
   return (
-    <div className="space-y-12">
-      {/* 페이지 타이틀 */}
-      <section>
-        <div className="flex items-center justify-between mb-4">
-          <h1 className="text-3xl font-bold text-gray-900">
+    <div>
+      {/* 페이지 타이틀 - 파란색 배경 */}
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 px-6 text-center">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center justify-center mb-4">
+            <div className="w-32 h-16 flex items-center justify-center bg-white rounded-md p-2 relative">
+              <Image src="/logos/celduc.png" alt="CELDUC 로고" fill style={{ objectFit: 'contain' }} />
+            </div>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">
             CELDUC (셀딕)
           </h1>
-          <div className="w-32 h-16 flex items-center justify-center bg-gray-50 rounded-md p-2 relative">
-             <Image src="/logos/celduc.png" alt="CELDUC 로고" layout="fill" objectFit="contain" />
+          <p className="text-lg md:text-xl font-semibold max-w-4xl mx-auto">
+            프랑스에 본사를 둔 산업용 SSR(무접점 릴레이) 및 마그네틱 센서 분야의 글로벌 리더입니다.
+            플라스틱 사출, 공장 자동화, 철도, 의료 등 고신뢰성이 요구되는 산업 현장에 최적화된 제어 솔루션을 제공합니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 핵심 전문 분야 - 흰색 배경 */}
+      <section className="bg-white py-12 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-8 text-center tracking-tight">
+            핵심 전문 분야
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {coreCategories.map((category) => (
+              <div key={category.name}
+                   className="p-6 bg-white border-2 border-blue-100 rounded-xl shadow-lg hover:shadow-2xl hover:border-blue-500 transition-all">
+                <div className="relative w-full h-40 mb-4 bg-white rounded-md overflow-hidden border border-gray-200">
+                  <Image
+                    src={category.image}
+                    alt={category.name}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="opacity-70"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center text-base font-semibold text-gray-800 bg-white bg-opacity-70">
+                    ({category.name} 이미지 필요)
+                  </div>
+                </div>
+
+                <h3 className="text-lg font-black text-blue-600 mb-2">
+                  {category.name}
+                </h3>
+                <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+                  {category.description}
+                </p>
+                <Link href="/contact"
+                      className="inline-block font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                  전문가 상담하기 →
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
-        <p className="text-lg text-gray-700 border-l-4 border-primary-blue pl-4">
-          CELDUC은 프랑스에 본사를 둔 **산업용 SSR(무접점 릴레이)** 및 **마그네틱 센서** 분야의 글로벌 리더입니다.
-          <br />
-          플라스틱 사출, 공장 자동화, 철도, 의료 등 고신뢰성이 요구되는 산업 현장에 최적화된 제어 솔루션을 제공합니다.
-        </p>
       </section>
 
-      {/* 핵심 전문 분야 리스트 */}
-      <section>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-          핵심 전문 분야
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {coreCategories.map((category) => (
-            <div key={category.name} 
-                 className="p-6 bg-accent-blue border border-blue-200 rounded-lg shadow-sm flex flex-col justify-between">
-              {/* --- 이미지 영역 추가 --- */}
-              <div className="relative w-full h-40 mb-4 bg-white rounded-md overflow-hidden border border-gray-200">
-                <Image 
-                  src={category.image} 
-                  alt={category.name} 
-                  layout="fill" 
-                  objectFit="cover" 
-                  className="opacity-70"
-                />
-                 <div className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-gray-800 bg-white bg-opacity-70">
-                   ({category.name} 이미지 필요)
-                 </div>
-              </div>
-              {/* --- 이미지 영역 완료 --- */}
-              
-              <div>
-                <h3 className="text-xl font-semibold text-blue-800 mb-2">
+      {/* 기타 취급 제품군 - 연한 파란색 배경 */}
+      <section className="bg-blue-50 py-12 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-8 text-center tracking-tight">
+            기타 취급 제품군
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {otherCategories.map((category) => (
+              <div key={category.name}
+                   className="p-6 bg-white border-2 border-gray-200 rounded-xl shadow-lg hover:shadow-2xl hover:border-blue-500 transition-all">
+                <h3 className="text-lg font-black text-gray-900 mb-2">
                   {category.name}
                 </h3>
-                <p className="text-light-text mb-4">
+                <p className="text-sm text-gray-700 mb-4 leading-relaxed">
                   {category.description}
                 </p>
-              </div>
-              <div className="mt-4">
-                <Link href="/contact" 
-                      className="font-medium text-primary-blue hover:text-blue-800">
+                <Link href="/contact"
+                      className="inline-block font-bold text-blue-600 hover:text-blue-800 transition-colors">
                   전문가 상담하기 →
                 </Link>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 기타 취급 제품군 리스트 */}
-      <section>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-          기타 취급 제품군
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {otherCategories.map((category) => (
-            <div key={category.name} 
-                 className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {category.name}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {category.description}
-                </p>
-              </div>
-              <div className="mt-4">
-                <Link href="/contact" 
-                      className="text-primary-blue hover:text-blue-800 font-medium">
-                  전문가 상담하기 →
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 상담 유도 섹션 */}
-      <section className="text-center bg-gray-50 p-8 rounded-lg">
-        <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-          CELDUC 제품 관련 기술 상담
-        </h3>
-        <p className="text-lg text-gray-700 mb-6">
-          산업용 히터의 정밀 온도 제어, 3상 모터의 소프트 스타트,
-          <br />
-          또는 ATEX 방폭 지역용 센서에 대한 기술 지원, 샘플, 견적이 필요하신가요?
-        </p>
-        <div className="flex justify-center gap-4">
+      {/* 상담 유도 섹션 - 흰색 배경 */}
+      <section className="bg-white py-12 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-black text-gray-900 mb-4 tracking-tight">
+            CELDUC 제품 관련 기술 상담
+          </h3>
+          <p className="text-base md:text-lg text-gray-700 mb-8">
+            산업용 SSR, 모터 제어, 고신뢰성 센서의 기술 지원, 샘플, 견적이 필요하신가요?
+            <br />
+            지금 바로 전문가에게 문의하세요.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact"
-                className="inline-block text-white bg-primary-blue hover:bg-blue-700 px-6 py-3 rounded-md text-lg font-medium">
-                전화상담 (대표 연결)
+                  className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg text-base font-bold shadow-lg transition-all transform hover:scale-105">
+              전화상담 (대표 연결)
             </Link>
-            <Link href="/contact" 
-                className="inline-block text-blue-700 bg-white border border-primary-blue hover:bg-blue-50 px-6 py-3 rounded-md text-lg font-medium">
-                간편 문의 남기기
+            <Link href="/contact"
+                  className="inline-block text-blue-700 bg-white border-2 border-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-base font-bold shadow-lg transition-all">
+              간편 문의 남기기
             </Link>
+          </div>
         </div>
       </section>
     </div>

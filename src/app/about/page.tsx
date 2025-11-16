@@ -20,10 +20,10 @@ export default function AboutPage() {
     <div>
       {/* 페이지 타이틀 - 파란색 배경 */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-6 text-center">
-        <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">
           회사 소개
         </h1>
-        <p className="text-xl md:text-2xl font-semibold max-w-4xl mx-auto">
+        <p className="text-lg md:text-xl font-semibold max-w-4xl mx-auto">
           제이에스일렉트론은 단순한 부품 공급을 넘어, 고객의 성공적인 비즈니스를 위한
           신뢰할 수 있는 기술 파트너입니다.
         </p>
@@ -32,7 +32,7 @@ export default function AboutPage() {
       {/* CEO 메시지 섹션 (AC 2) - 흰색 배경 */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-black text-gray-900 mb-10 text-center tracking-tight">
+          <h2 className="text-3xl font-black text-gray-900 mb-10 text-center tracking-tight">
             CEO 메시지
           </h2>
           <div className="space-y-6 text-gray-800 text-lg leading-relaxed">
@@ -62,7 +62,7 @@ export default function AboutPage() {
       {/* 비전 및 핵심 가치 섹션 (AC 3) - 연한 파란색 배경 */}
       <section className="bg-blue-50 py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-black text-gray-900 mb-10 text-center tracking-tight">
+          <h2 className="text-3xl font-black text-gray-900 mb-10 text-center tracking-tight">
             핵심 가치
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -97,7 +97,7 @@ export default function AboutPage() {
       {/* 핵심 파트너사 섹션 - 흰색 배경 */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-black text-gray-900 mb-6 text-center tracking-tight">
+          <h2 className="text-3xl font-black text-gray-900 mb-6 text-center tracking-tight">
             핵심 파트너사
           </h2>
           <p className="text-xl text-gray-700 mb-10 text-center max-w-3xl mx-auto">
@@ -132,16 +132,16 @@ export default function AboutPage() {
       {/* 추가 역량 암시 - 연한 파란색 배경 */}
       <section className="text-center bg-blue-50 py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
+          <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6 tracking-tight">
             찾으시는 부품이 없으신가요?
           </h3>
-          <p className="text-xl md:text-2xl font-semibold text-gray-700 mb-10">
+          <p className="text-lg md:text-xl font-semibold text-gray-700 mb-10">
             제이에스일렉트론은 5대 파트너사 외에도 수많은 커넥터 및 부품 소재 공급망을 확보하고 있습니다.
             <br />
             부품 소재 전문가가 대표님의 니즈에 맞는 최적의 솔루션을 찾아 드립니다.
           </p>
           <Link href="/contact"
-                className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-lg text-xl font-bold shadow-lg transition-all transform hover:scale-105">
+                className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg text-lg font-bold shadow-lg transition-all transform hover:scale-105">
             전문가에게 지금 바로 문의하기
           </Link>
         </div>
