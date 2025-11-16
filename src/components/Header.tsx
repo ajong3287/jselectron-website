@@ -6,13 +6,7 @@ export default function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between p-4">
         <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.jpg"
-            alt="제이에스일렉트론 로고"
-            width={150}
-            height={40}
-            priority
-          />
+          <span className="text-xl font-bold text-gray-900">제이에스일렉트론</span>
         </Link>
         <div className="hidden md:flex space-x-6">
           <Link href="/" className="text-gray-700 hover:text-blue-600">홈</Link>
