@@ -55,9 +55,6 @@ export default function AboutPage() {
           <p className="text-center font-semibold text-xl text-gray-900">
             믿고 상담해주십시오. 득이 되는 파트너가 될 것을 약속드립니다.
           </p>
-          <p className="text-right text-gray-600 mt-8">
-            - 대표이사 박동주
-          </p>
         </div>
         </div>
       </section>
