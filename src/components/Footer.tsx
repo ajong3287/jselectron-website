@@ -1,24 +1,20 @@
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
-    <footer className="border-t mt-auto">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-bold mb-2">JS Electronics</h3>
-            <p className="text-sm text-gray-600">Company info placeholder</p>
-          </div>
-          <div>
-            <h3 className="font-bold mb-2">Contact</h3>
-            <p className="text-sm text-gray-600">Contact info placeholder</p>
-          </div>
-          <div>
-            <h3 className="font-bold mb-2">Location</h3>
-            <p className="text-sm text-gray-600">Address placeholder</p>
-          </div>
-        </div>
-        <div className="mt-8 pt-4 border-t text-center text-sm text-gray-600">
-          Copyright {new Date().getFullYear()} JS Electronics. All rights reserved.
-        </div>
+    <footer className="bg-gray-100 border-t border-gray-200 mt-auto">
+      <div className="container mx-auto p-6 text-center text-gray-500 text-sm space-y-1">
+        <p>
+          상호: 제이에스일렉트론 | 대표: 박동주 | 사업자등록번호: 134-21-33120
+        </p>
+        <p>
+          주소: 서울특별시 구로구 경인로53길 15, 나동 2층 2207호 (구로동, 중앙유통단지)
+        </p>
+        <p>
+          대표전화: 010-2629-4760 | 이메일: (이메일 확정 필요)
+        </p>
+        <p className="pt-2">
+          Copyright © {currentYear} JS Electron. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

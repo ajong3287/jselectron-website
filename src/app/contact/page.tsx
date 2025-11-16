@@ -7,8 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  // TODO: 대표 전화번호 확정 필요
-  const phoneNumber = "010-XXXX-XXXX"; // (임시 전화번호)
+  const phoneNumber = "010-2629-4760";
   const telLink = `tel:${phoneNumber}`;
 
   return (
