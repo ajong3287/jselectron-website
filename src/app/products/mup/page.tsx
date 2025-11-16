@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'MUP 커넥터 | 제이에스일렉트론',
-  description: 'MUP (엠유피)의 IC/SIM/메모리 카드 커넥터, BTB, FPC, RF 등 정밀 커넥터 전문. 전문가와 상담하세요.',
+  title: 'MUP 커넥터',
+  description: 'MUP IC카드·SIM·메모리카드 소켓 전문. NANO SIM, TF, SD카드 커넥터, 0.4mm BTB/FPC 초정밀 커넥터. 견적 문의 환영.',
 };
 
 // --- 큐레이션 (수정됨) ---

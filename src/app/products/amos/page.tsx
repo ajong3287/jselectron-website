@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Amos 핀 커넥터 | 제이에스일렉트론',
-  description: 'Amos (아모스)의 핀 헤더, 암 헤더, IC 소켓, PLCC 소켓 등 PCB 표준 커넥터 전문. 전문가와 상담하세요.',
+  title: 'Amos 핀 커넥터',
+  description: 'Amos 핀헤더·암헤더·IC소켓 전문. 0.8~2.54mm Pitch, SMT/DIP/R/A 타입, DIP·PLCC·PGA 소켓. 견적 문의 가능.',
 };
 
 // --- 큐레이션 (수정됨) ---

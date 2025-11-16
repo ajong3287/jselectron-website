@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import ContactModule from '@/components/modules/ContactModule'; // 클라이언트 폼 컴포넌트 import
 
 export const metadata: Metadata = {
-  title: '문의하기 | 제이에스일렉트론',
-  description: '커넥터, 배터리, SSR 전문가에게 전화 또는 간편 문의로 상담을 요청하세요.',
+  title: '문의하기',
+  description: '커넥터·배터리·SSR 전문가 직통 상담: 010-2629-4760. 비교견적, 기술지원, 샘플 요청 환영. 간편 문의 접수 가능.',
 };
 
 export default function ContactPage() {

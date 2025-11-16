@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'CELDUC SSR & Sensors | 제이에스일렉트론',
-  description: 'CELDUC (셀딕)의 고신뢰성 산업용 SSR(무접점 릴레이), 모터 컨트롤러, 마그네틱 센서 전문. 전문가와 상담하세요.',
+  title: 'CELDUC SSR & Sensors',
+  description: 'CELDUC 산업용 SSR 전문: 히터 제어, 모터 소프트스타터, ATEX 방폭 센서. okpac·celpac 시리즈. 기술 상담 환영.',
 };
 
 // --- 큐레이션 (수정됨) ---

@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'LithoTop 소형 배터리 | 제이에스일렉트론',
-  description: 'LithoTop (리소탑)의 TWS, 웨어러블, 의료기기용 초소형 리튬 폴리머 배터리 팩 및 BMS 전문. 전문가와 상담하세요.',
+  title: 'LithoTop 소형 배터리',
+  description: 'LithoTop 초소형 리튬 폴리머 배터리 전문: TWS 이어폰, 스마트워치, 의료기기용 맞춤 배터리 팩. BMS 설계 지원.',
 };
 
 // --- 큐레이션 (수정됨) ---

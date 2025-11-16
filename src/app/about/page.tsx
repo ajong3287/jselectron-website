@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '회사 소개 | 제이에스일렉트론',
-  description: '제이에스일렉트론의 경영 철학과 전문성을 소개합니다.',
+  title: '회사 소개',
+  description: '커넥터 & 배터리 전문 제이에스일렉트론. CEO 박동주의 정직한 기술 파트너십, SinoTech·MUP·CELDUC·LithoTop·Amos 공식 취급. 견적 상담 환영.',
 };
 
 export default function AboutPage() {

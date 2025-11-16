@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'SinoTech 커넥터 | 제이에스일렉트론',
-  description: 'SinoTech (시노텍)의 통신, 네트워크, PC, 범용 커넥터 전문 공급. 전문가와 상담하세요.',
+  title: 'SinoTech 커넥터',
+  description: 'SinoTech 통신 커넥터 전문: RJ45, SFP, USB-C, HDMI, D-SUB, RF 커넥터. 견적 및 기술 상담 가능.',
 };
 
 // --- 큐레이션 (수정됨) ---

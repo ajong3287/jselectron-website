@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '제품 소개 | 제이에스일렉트론',
-  description: '커넥터, 소형 배터리, SSR 릴레이 등 5대 핵심 제조사의 전문 제품군을 소개합니다.',
+  title: '제품 소개',
+  description: 'SinoTech 커넥터, MUP 카드소켓, CELDUC SSR, LithoTop 배터리, Amos 핀헤더 전문 공급. 기술 상담 및 견적 문의 가능.',
 };
 
 // 5대 핵심 파트너 및 전문 분야 데이터 (PRD 5.0, Arch 6.0 기반)
