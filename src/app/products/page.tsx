@@ -61,7 +61,7 @@ export default function ProductsPage() {
        {/* 상담 유도 섹션 (AC 3) - Epic 8: 연한 파란색 배경 */}
       <section className="text-center bg-blue-50 py-16 px-6">
         <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-          '부품 소재 공급 달인'의 맞춤 솔루션
+          부품 소재 전문가의 맞춤 솔루션
         </h3>
         <p className="text-xl md:text-2xl font-semibold text-gray-700 mb-10 max-w-3xl mx-auto">
           찾으시는 제품이 없거나, 어떤 부품이 적합할지 확신이 서지 않으시나요?

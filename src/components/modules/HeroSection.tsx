@@ -21,7 +21,7 @@ export default function HeroSection() {
       {/* 컨텐츠 레이어 */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] text-center p-8 md:p-12">
         <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
-          부품 소재 공급 달인.
+          부품 소재 전문가에게 문의주세요.
         </h1>
         <p className="text-2xl md:text-4xl font-bold text-blue-100 mb-10">
           커넥터, 소형 배터리, 산업용 SSR 전문가의 1:1 맞춤 상담.

@@ -16,7 +16,7 @@ export default function Home() {
       {/* 3. CTA 섹션 (Story 3.1) - Epic 8: 연한 파란색 배경 */}
       <section className="bg-blue-50 text-center py-16 px-6">
         <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-          '부품 소재 공급 달인'에게 직접 문의하세요.
+          부품 소재 전문가에게 직접 문의하세요.
         </h2>
         <p className="text-xl md:text-2xl font-semibold text-gray-700 mb-10">
           가장 빠르고 정확한 솔루션을 제공받으실 수 있습니다.
