@@ -1,0 +1,93 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Amos 핀 커넥터 | 제이에스일렉트론',
+  description: 'Amos (아모스)의 핀 헤더, 암 헤더, IC 소켓, PLCC 소켓 등 PCB 표준 커넥터 전문. 전문가와 상담하세요.',
+};
+
+// Amos 핵심 제품 카테고리 (PDF 카탈로그 기반)
+const categories = [
+  { name: '핀 헤더 (Pin Header)', description: '0.8, 1.0, 1.27, 2.0, 2.54mm Pitch. SMT, DIP, R/A (ㄱ자) 타입' },
+  { name: '암 헤더 (Female Header)', description: '0.8, 1.0, 1.27, 2.0, 2.54mm Pitch. SMT, DIP, R/A (ㄱ자) 타입' },
+  { name: 'IC 소켓 (IC Socket)', description: 'DIP IC 소켓, PLCC 소켓, PGA 소켓 등 다양한 반도체 칩 소켓' },
+  { name: '박스 헤더 (Box Header)', description: 'Ejector Header 포함, IDC 케이블 연결용 표준 박스 헤더' },
+  { name: '보드-투-보드 (BTB)', description: 'PCB 기판 간의 직접 연결을 위한 다양한 Pitch의 BTB 커넥터' },
+  { name: '기타 커넥터', description: 'FPC/FFC, D-SUB, 와이어 하네스 등 맞춤형 솔루션' },
+];
+
+export default function AmosPage() {
+  return (
+    <div className="space-y-12">
+      {/* 페이지 타이틀 */}
+      <section>
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-3xl font-bold text-gray-900">
+            Amos (아모스)
+          </h1>
+          {/* 임시 로고 */}
+          <div className="w-32 h-16 flex items-center justify-center bg-gray-50 rounded-md">
+             <span className="text-gray-400 italic">(Amos 로고)</span>
+          </div>
+        </div>
+        <p className="text-lg text-gray-700 border-l-4 border-blue-600 pl-4">
+          Amos는 **핀 헤더(Pin Header), 암 헤더(Female Header), IC 소켓** 등
+          <br />
+          **PCB(인쇄 회로 기판) 실장**에 필수적인 표준 커넥터 전문 제조사입니다.
+          <br />
+          임베디드 보드, 제어기기, SMT/EMS 공정에 필요한 모든 규격의 부품을 공급합니다.
+        </p>
+      </section>
+
+      {/* 제품 카테고리 리스트 (AC 2) */}
+      <section>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          주요 취급 제품군
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {categories.map((category) => (
+            <div key={category.name}
+                 className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {category.name}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {category.description}
+                </p>
+              </div>
+              <div className="mt-4">
+                <Link href="/contact"
+                      className="text-blue-600 hover:text-blue-800 font-medium">
+                  전문가 상담하기 →
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 상담 유도 섹션 (AC 3) */}
+      <section className="text-center bg-gray-50 p-8 rounded-lg">
+        <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+          Amos 제품 관련 기술 상담
+        </h3>
+        <p className="text-lg text-gray-700 mb-6">
+          개발 중인 보드에 적합한 1.27mm 핀 헤더, PLCC 소켓 등 표준 부품의 견적이나 샘플이 필요하신가요?
+          <br />
+          지금 바로 '커넥터 전문가'에게 문의하세요.
+        </p>
+        <div className="flex justify-center gap-4">
+            <Link href="/contact"
+                className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-md text-lg font-medium">
+                전화상담 (대표 연결)
+            </Link>
+            <Link href="/contact"
+                className="inline-block text-blue-700 bg-white border border-blue-600 hover:bg-blue-50 px-6 py-3 rounded-md text-lg font-medium">
+                간편 문의 남기기
+            </Link>
+        </div>
+      </section>
+    </div>
+  );
+}
