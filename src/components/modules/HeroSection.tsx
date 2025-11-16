@@ -3,10 +3,11 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   // Story 5.1에서 확정된 Primary Blue (#007AFF)와 Neutral Colors를 기반으로 스타일링
+  // Epic 8: 디자인 개선 - 파란색 그라데이션 배경으로 시각적 임팩트 강화
   return (
-    <section className="relative w-full h-[500px] bg-gray-900 overflow-hidden rounded-xl shadow-2xl">
+    <section className="relative w-full min-h-[60vh] bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 overflow-hidden">
       {/* 3-Layer Expertise 비주얼 배경 (Placeholder) */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-10">
         {/* TODO: 3가지 핵심 제품 이미지를 조합한 단일 비주얼 파일 필요 */}
         <Image
           src="/products/expertise-collage-placeholder.jpg"
@@ -18,11 +19,11 @@ export default function HeroSection() {
       </div>
 
       {/* 컨텐츠 레이어 */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-6 bg-black bg-opacity-40">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] text-center p-8 md:p-12">
+        <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
           부품 소재 공급 달인.
         </h1>
-        <p className="text-xl md:text-3xl font-semibold text-blue-300 mb-8">
+        <p className="text-2xl md:text-4xl font-bold text-blue-100 mb-10">
           커넥터, 소형 배터리, 산업용 SSR 전문가의 1:1 맞춤 상담.
         </p>
 
@@ -31,14 +32,14 @@ export default function HeroSection() {
           {/* 전화 상담 (Primary CTA) */}
           <a
             href="tel:01026294760"
-            className="inline-block px-8 py-3 text-lg font-bold text-white bg-blue-600 rounded-lg shadow-xl hover:bg-blue-700 transition-colors transform hover:scale-105"
+            className="inline-block px-10 py-4 text-xl font-bold text-blue-900 bg-white rounded-lg shadow-2xl hover:bg-blue-50 transition-all transform hover:scale-105"
           >
             📞 지금 바로 전화상담 (010-2629-4760)
           </a>
           {/* 간편 문의 (Secondary CTA) */}
           <Link href="/contact" passHref legacyBehavior>
             <a
-              className="inline-block px-8 py-3 text-lg font-bold text-white border-2 border-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              className="inline-block px-10 py-4 text-xl font-bold text-white border-3 border-white rounded-lg hover:bg-white hover:text-blue-900 transition-all"
             >
               간편 문의 남기기 →
             </a>
