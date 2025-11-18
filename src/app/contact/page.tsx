@@ -11,47 +11,63 @@ export default function ContactPage() {
   const telLink = `tel:${phoneNumber}`;
 
   return (
-    <div>
-      {/* 페이지 타이틀 - 파란색 배경 */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">
-          문의하기
-        </h1>
-        <p className="text-lg md:text-xl font-semibold max-w-4xl mx-auto">
-          구매팀의 비교 견적부터 R&D팀의 기술/샘플 상담까지,
-          부품 소재 전문가가 신속하고 정확하게 답변해 드립니다.
-        </p>
-      </section>
+    <div className="bg-white">
+      {/* 페이지 타이틀 */}
+      <section className="relative h-[400px] bg-dark-bg overflow-hidden -mt-20 pt-20">
+        <div
+          className="absolute inset-0 bg-cover bg-center brightness-125"
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80)' }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-dark-bg/60 via-dark-bg/50 to-dark-bg/40"></div>
+        </div>
 
-      {/* 1. 전화상담 (Primary CTA) - 흰색 배경 */}
-      <section className="bg-white py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-black text-gray-900 mb-6 tracking-tight">
-            가장 빠른 방법: 전화상담
-          </h2>
-          <p className="text-xl text-gray-700 mb-10">
-            지금 바로 전화주시면 전문가가 실시간으로 니즈를 파악하고 솔루션을 제안합니다.
-          </p>
-          <a
-            href={telLink}
-            className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg text-xl font-bold shadow-lg transition-transform transform hover:scale-105"
-          >
-            📞 {phoneNumber}
-          </a>
-          <p className="text-gray-600 mt-6 text-lg">
-            (상담 가능 시간: 평일 09:00 - 18:00)
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+          <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight text-shadow text-white">
+            CONTACT
+          </h1>
+          <p className="text-base md:text-lg font-medium text-gray-200 max-w-4xl">
+            구매팀의 비교 견적부터 R&D팀의 기술/샘플 상담까지,
+            부품 소재 전문가가 신속하고 정확하게 답변해 드립니다.
           </p>
         </div>
       </section>
 
-      {/* 2. 간편 문의 (Secondary CTA) - 연한 파란색 배경 */}
-      <section className="bg-blue-50 py-16 px-6">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-black text-gray-900 mb-10 text-center tracking-tight">
-            전화가 어려우신가요? 간편 문의를 남겨주세요.
-          </h2>
-          {/* ContactModule은 'use client'가 선언된 클라이언트 컴포넌트입니다. */}
-          <ContactModule />
+      {/* 2단 레이아웃 섹션 */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-5xl ml-0 mr-auto pl-12">
+          <div className="grid md:grid-cols-3 gap-16">
+            {/* 왼쪽: 연락처 정보 */}
+            <div className="md:col-span-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Inquiry
+              </h2>
+              <p className="text-gray-600 mb-8">
+                If you have any questions,<br />
+                please contact us.
+              </p>
+
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">Tel.</p>
+                  <a href={telLink} className="text-base text-primary-blue hover:underline">
+                    010-2629-4760
+                  </a>
+                </div>
+
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">E-mail.</p>
+                  <a href="mailto:info@jselectron.co.kr" className="text-base text-primary-blue hover:underline">
+                    info@jselectron.co.kr
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* 오른쪽: 문의 폼 */}
+            <div className="md:col-span-1">
+              <ContactModule />
+            </div>
+          </div>
         </div>
       </section>
     </div>

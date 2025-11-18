@@ -1,149 +1,123 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: '회사 소개',
   description: '커넥터 & 배터리 전문 제이에스일렉트론. CEO 박동주의 정직한 기술 파트너십, SinoTech·MUP·CELDUC·LithoTop·Amos 공식 취급. 견적 상담 환영.',
 };
 
-const partners = [
-  { name: 'SinoTech', specialty: '통신/네트워크/범용 커넥터', url: '/products/sinotech', logo: '/logos/sinotech.png' },
-  { name: 'MUP', specialty: 'IC/SIM/메모리 카드 커넥터', url: '/products/mup', logo: '/logos/mup.png' },
-  { name: 'CELDUC', specialty: '산업용 SSR (무접점 릴레이)', url: '/products/celduc', logo: '/logos/celduc.png' },
-  { name: 'LithoTop', specialty: '소형 리튬 폴리머 배터리', url: '/products/lithotop', logo: '/logos/lithotop.png' },
-  { name: 'Amos', specialty: '핀 헤더 및 IC 소켓 (PCB 표준)', url: '/products/amos', logo: '/logos/amos.png' },
-];
-
 export default function AboutPage() {
   return (
-    <div>
-      {/* 페이지 타이틀 - 파란색 배경 */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">
-          회사 소개
-        </h1>
-        <p className="text-lg md:text-xl font-semibold max-w-4xl mx-auto">
-          제이에스일렉트론은 단순한 부품 공급을 넘어, 고객의 성공적인 비즈니스를 위한
-          신뢰할 수 있는 기술 파트너입니다.
-        </p>
-      </section>
-
-      {/* CEO 메시지 섹션 (AC 2) - 흰색 배경 */}
-      <section className="bg-white py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-black text-gray-900 mb-10 text-center tracking-tight">
-            CEO 메시지
-          </h2>
-          <div className="space-y-6 text-gray-800 text-lg leading-relaxed">
-          <p className="font-bold text-2xl text-blue-600 text-center mb-8">
-            "커넥터와 소형 배터리 분야의 전문가로서,<br />
-            고객의 어떤 니즈에도 확실한 솔루션을 제공합니다."
-          </p>
-          <p>
-            안녕하십니까, 제이에스일렉트론 대표 박동주입니다.
-          </p>
-          <p>
-            저는 수년간의 기술 영업 경험을 통해, B2B 시장에서 가장 중요한 것은 '신뢰'와 '전문성'임을 깨달았습니다.
-            저희는 화려한 포장 대신, '정직한 제품'과 '안정적인 공급', 그리고 '신속한 기술 지원'이라는 기본에 집중합니다.
-          </p>
-          <p>
-            제이에스일렉트론은 잡상인이 아닙니다.
-            대표인 제가 직접 '커넥터 전문가'이자 '유통 전문가'로서 고객사의 R&D 단계부터 양산까지 모든 과정을 함께 고민하고,
-            SinoTech, MUP, CELDUC, LithoTop, Amos 등 엄선된 파트너사들과의 유연한 협력을 통해 최적의 솔루션을 찾아 드립니다.
-          </p>
-          <p className="text-center font-semibold text-xl text-gray-900">
-            믿고 상담해주십시오. 득이 되는 파트너가 될 것을 약속드립니다.
-          </p>
+    <div className="bg-dark-bg">
+      {/* 페이지 타이틀 */}
+      <section className="relative h-[500px] bg-dark-bg overflow-hidden -mt-20 pt-20">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center brightness-125"
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80)' }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-dark-bg/60 via-dark-bg/50 to-dark-bg/40"></div>
         </div>
+
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+          <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight text-shadow text-white">
+            COMPANY
+          </h1>
+          <p className="text-lg md:text-xl font-medium text-gray-200">
+            Global leader in the supply of electronic parts
+          </p>
         </div>
       </section>
 
-      {/* 비전 및 핵심 가치 섹션 (AC 3) - 연한 파란색 배경 */}
-      <section className="bg-blue-50 py-16 px-6">
+      {/* CEO 메시지 섹션 */}
+      <section className="bg-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-black text-gray-900 mb-10 text-center tracking-tight">
-            핵심 가치
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-12 tracking-tight">
+            CEO Message
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-          {/* 가치 1: 정직함 */}
-          <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-blue-100 hover:border-blue-500 transition-all">
-            <h3 className="font-black text-2xl mb-4 text-blue-600">정직 (Honesty)</h3>
-            <p className="text-gray-700 leading-relaxed">
-              과장된 약속 대신, 투명한 정보와 실현 가능한 납기를 약속합니다.
-              모든 비즈니스는 정직함에서 시작됩니다.
-            </p>
-          </div>
-          {/* 가치 2: 품질 */}
-          <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-blue-100 hover:border-blue-500 transition-all">
-            <h3 className="font-black text-2xl mb-4 text-blue-600">품질 (Quality)</h3>
-            <p className="text-gray-700 leading-relaxed">
-              불량 제로화를 목표로, 검증된 5대 핵심 제조사의 제품만을 고집합니다.
-              품질은 타협의 대상이 아닙니다.
-            </p>
-          </div>
-          {/* 가치 3: 안정적 공급 */}
-          <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-blue-100 hover:border-blue-500 transition-all">
-            <h3 className="font-black text-2xl mb-4 text-blue-600">안정적 공급 (Stability)</h3>
-            <p className="text-gray-700 leading-relaxed">
-              고객의 생산 일정에 차질이 없도록, 안정적인 부품 공급망을 확보하고
-              신속하게 대응합니다.
-            </p>
-          </div>
-        </div>
-        </div>
-      </section>
 
-      {/* 핵심 파트너사 섹션 - 흰색 배경 */}
-      <section className="bg-white py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-black text-gray-900 mb-6 text-center tracking-tight">
-            핵심 파트너사
-          </h2>
-          <p className="text-xl text-gray-700 mb-10 text-center max-w-3xl mx-auto">
-            제이에스일렉트론은 다음 5대 핵심 제조사의 공식 파트너로서,
-            검증된 제품의 안정적인 한국 공급이 가능합니다.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {partners.map((partner) => (
-              <Link key={partner.name} href={partner.url}
-                    className="block p-8 bg-white border-2 border-gray-200 rounded-xl shadow-lg
-                               hover:shadow-2xl hover:border-blue-600 hover:bg-blue-50 transition-all duration-300 transform hover:scale-105">
-                <div className="h-20 mb-4 flex items-center justify-center bg-gray-50 rounded-md p-2 relative">
-                  <Image
-                    src={partner.logo}
-                    alt={`${partner.name} 로고`}
-                    fill
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-                <h3 className="text-2xl font-black text-gray-900 mb-3 tracking-tight">
-                  {partner.name}
-                </h3>
-                <p className="text-lg font-semibold text-gray-700">
-                  {partner.specialty}
+          <div className="grid md:grid-cols-[300px_1fr] gap-0">
+            {/* 왼쪽: 파란색 박스 */}
+            <div className="bg-primary-blue p-6 h-80 flex items-center">
+              <div className="space-y-3 text-white text-xs leading-relaxed">
+                <p>고객의 소중함을 아는 회사,</p>
+                <p>새로운 사고와 철저한 프로정신으로,</p>
+                <p>브랜드 파워를 강화하기 위한,</p>
+                <p className="font-bold text-sm pt-2">
+                  전자부품 전문유통기업<br />
+                  제이에스일렉트론
                 </p>
-              </Link>
-            ))}
+              </div>
+            </div>
+
+            {/* 오른쪽: 비즈니스 이미지 (호버 확대) */}
+            <div className="h-80 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80"
+                alt="Business"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
+            </div>
+          </div>
+
+          {/* 하단 텍스트 (오른쪽 배치, 왼쪽 정렬) */}
+          <div className="mt-8 ml-auto max-w-2xl space-y-4 text-gray-700 text-sm leading-relaxed">
+            <p className="font-bold">
+              안녕하십니까.
+            </p>
+            <p>
+              제이에스일렉트론 홈페이지를 방문해 주셔서 감사합니다.
+            </p>
+            <p>
+              저희는 전자부품 유통 전문 회사입니다.
+            </p>
+            <p>
+              전세계 유수의 전자부품 생산업체들의 우수한 품질과 가격경쟁력 있는 제품들을 국내외 고객사들에게 소개해 드리고
+              고객사의 요청에 최대한 부합하는 가격, 납기, 거래조건 등으로 대응해 드리는 것을 최고의 사명으로 여기고 있습니다.
+            </p>
+            <p>
+              항상 고객사의 경쟁력(품질, 가격, 납기 등)에 일조를 할 수 있는 협력사로서의 사명을 잊지 않고
+              저희들이 맡은 분야에서만큼은 고객사에 최고의 만족을 드릴 수 있도록 노력하고 정진하겠습니다.
+            </p>
+            <p>
+              어디서든 언제든 어떻게든 저희들이 맡은 분야 이상에서 저희들을 필요로 하시는 고객사들의 손과 발이 되겠습니다.
+            </p>
+            <p className="pt-2">
+              감사합니다.
+            </p>
+            <p className="text-right text-gray-500 text-xs">
+              JS Electron Co., Ltd. CEO
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 추가 역량 암시 - 연한 파란색 배경 */}
-      <section className="text-center bg-blue-50 py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6 tracking-tight">
-            찾으시는 부품이 없으신가요?
+      {/* CTA 섹션 */}
+      <section className="relative bg-dark-bg py-20 px-6">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-blue/10 via-accent-blue/5 to-primary-blue/10"></div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl md:text-4xl font-black text-white mb-6 tracking-tight text-shadow">
+            지금 바로 전문가와 상담하세요
           </h3>
-          <p className="text-lg md:text-xl font-semibold text-gray-700 mb-10">
-            제이에스일렉트론은 5대 파트너사 외에도 수많은 커넥터 및 부품 소재 공급망을 확보하고 있습니다.
-            <br />
-            부품 소재 전문가가 대표님의 니즈에 맞는 최적의 솔루션을 찾아 드립니다.
+          <p className="text-lg md:text-xl font-medium text-gray-400 mb-10">
+            최적의 부품 솔루션을 찾아드립니다
           </p>
-          <Link href="/contact"
-                className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg text-lg font-bold shadow-lg transition-all transform hover:scale-105">
-            전문가에게 지금 바로 문의하기
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="tel:01026294760"
+                className="inline-flex items-center justify-center text-white bg-gradient-to-r from-primary-blue to-accent-blue hover:shadow-accent-blue/50 px-10 py-4 rounded-xl text-lg font-bold shadow-2xl transition-all transform hover:scale-105 glow-blue">
+                <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                전화상담 (010-2629-4760)
+            </a>
+            <Link href="/contact"
+                className="inline-flex items-center justify-center text-white bg-dark-section border-2 border-accent-blue hover:bg-accent-blue/10 px-10 py-4 rounded-xl text-lg font-bold shadow-lg transition-all backdrop-blur-sm">
+                간편 문의 남기기
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+            </Link>
+          </div>
         </div>
       </section>
     </div>
