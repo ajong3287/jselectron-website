@@ -25,7 +25,7 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight text-shadow text-white">
             CONTACT
           </h1>
-          <p className="text-base md:text-lg font-medium text-gray-200 max-w-4xl">
+          <p className="text-lg md:text-xl font-medium text-gray-200 max-w-4xl">
             구매팀의 비교 견적부터 R&D팀의 기술/샘플 상담까지,
             부품 소재 전문가가 신속하고 정확하게 답변해 드립니다.
           </p>
@@ -33,12 +33,12 @@ export default function ContactPage() {
       </section>
 
       {/* 2단 레이아웃 섹션 */}
-      <section className="bg-white py-16 px-6">
+      <section className="bg-white py-20 px-6">
         <div className="max-w-5xl ml-0 mr-auto pl-12">
           <div className="grid md:grid-cols-3 gap-16">
             {/* 왼쪽: 연락처 정보 */}
             <div className="md:col-span-2">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-black text-gray-900 mb-12 tracking-tight">
                 Inquiry
               </h2>
               <p className="text-gray-600 mb-8">

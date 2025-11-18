@@ -35,10 +35,10 @@ export default function ServiceCards() {
     <section className="py-20 px-6 bg-gradient-to-b from-dark-bg to-dark-section">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-4 text-shadow">
+          <h2 className="text-3xl font-black text-white mb-4 text-shadow">
             핵심 서비스
           </h2>
-          <p className="text-xl text-gray-400">
+          <p className="text-base text-gray-400">
             고객의 성공을 위한 3가지 전문 솔루션
           </p>
         </div>

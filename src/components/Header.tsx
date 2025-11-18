@@ -26,19 +26,17 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-8 flex-1 justify-center">
           <Link href="/about" className={`hover:text-accent-blue transition-colors ${
             isScrolled ? 'text-gray-700' : 'text-white'
-          }`}>company</Link>
+          }`}>Company</Link>
           <Link href="/products" className={`hover:text-accent-blue transition-colors ${
             isScrolled ? 'text-gray-700' : 'text-white'
-          }`}>product</Link>
+          }`}>Product</Link>
           <Link href="/support" className={`hover:text-accent-blue transition-colors ${
             isScrolled ? 'text-gray-700' : 'text-white'
           }`}>Customer Center</Link>
+          <Link href="/contact" className={`hover:text-accent-blue transition-colors ${
+            isScrolled ? 'text-gray-700' : 'text-white'
+          }`}>Contact</Link>
         </div>
-        <Link href="/contact" className={`px-4 py-2 rounded text-sm font-medium transition-all hidden md:block ${
-          isScrolled
-            ? 'text-gray-700 border border-gray-300 hover:bg-gray-50'
-            : 'text-white border border-white/30 hover:bg-white/10'
-        }`}>Contact</Link>
         <div className="md:hidden">
           <button className={isScrolled ? 'text-gray-900' : 'text-white'}>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

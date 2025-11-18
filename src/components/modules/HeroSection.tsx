@@ -88,7 +88,7 @@ export default function HeroSection() {
                 </span>
               </div>
 
-              <h1 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight text-shadow max-w-5xl">
+              <h1 className="text-3xl font-black text-white mb-6 leading-tight tracking-tight text-shadow max-w-5xl">
                 {slide.title}
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-blue-400">
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 </span>
               </h1>
 
-              <p className="text-sm md:text-base font-medium text-gray-400 mb-8 max-w-3xl leading-relaxed whitespace-pre-line">
+              <p className="text-base font-medium text-gray-400 mb-8 max-w-3xl leading-relaxed whitespace-pre-line">
                 {slide.description}
               </p>
 

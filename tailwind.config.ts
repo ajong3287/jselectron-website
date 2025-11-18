@@ -20,7 +20,8 @@ const config: Config = {
         'gradient-end': '#3B82F6',   // Gradient end (bright blue)
       },
       fontFamily: {
-        sans: ['Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'sans-serif'],
+        sans: ['var(--font-poppins)', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'sans-serif'],
+        korean: ['Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
