@@ -2,8 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Story 5.4: 기본 텍스트 색상 및 폰트 적용 */
+/* Zenith-inspired Dark Theme Global Styles */
 body {
-  color: #333333; /* light-text */
+  background-color: #0A0E1A;
+  color: #E5E7EB;
   font-family: Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Text shadow for better readability on dark backgrounds */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Glow effect for accent elements */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }

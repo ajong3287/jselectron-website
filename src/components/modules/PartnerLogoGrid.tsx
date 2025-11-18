@@ -12,14 +12,14 @@ const manufacturers = [
 
 export default function PartnerLogoGrid() {
   return (
-    <section className="py-12 bg-gray-50 rounded-lg">
-      <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+    <section className="py-12 bg-dark-section">
+      <h2 className="text-2xl font-bold text-center text-white mb-8">
         핵심 파트너 제조사 (5대 전문 브랜드)
       </h2>
       <div className="flex flex-wrap justify-center items-center gap-8 px-4">
         {manufacturers.map((m) => (
           <Link key={m.name} href={m.url} passHref legacyBehavior>
-            <a className="w-24 h-16 md:w-36 md:h-20 flex items-center justify-center bg-white border border-gray-200 rounded-md p-2 relative shadow-sm hover:shadow-lg transition-shadow">
+            <a className="w-24 h-16 md:w-36 md:h-20 flex items-center justify-center bg-white/10 backdrop-blur-sm border border-gray-700 rounded-md p-2 relative shadow-sm hover:shadow-accent-blue/30 hover:border-accent-blue transition-all">
               <Image
                 src={m.logo}
                 alt={`${m.name} 로고`}
@@ -31,8 +31,8 @@ export default function PartnerLogoGrid() {
         ))}
       </div>
       <div className="text-center mt-8">
-        <Link href="/about" className="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-          자세한 파트너십 정보 확인 →
+        <Link href="/about" className="text-accent-blue hover:text-blue-400 font-medium hover:underline">
+          자세한 파트너십 정보 확인
         </Link>
       </div>
     </section>
